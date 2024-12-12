@@ -79,7 +79,7 @@ trait ModelCaching
             $instance->checkCooldownAndFlushAfterPersisting($instance, $relationship);
         });
 
-        static::pivotAttached(function ($instance, $secondInstance, $relationship) {
+        static::pivotAttached(function ($instance, $relationship) {
             $instance->checkCooldownAndFlushAfterPersisting($instance, $relationship);
         });
 
