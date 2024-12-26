@@ -294,7 +294,7 @@ class CacheKey
         return $this->processEnum($value);
     }
 
-    protected function getValuesFromBindings(array $where, string $values) : string
+    protected function getValuesFromBindings(array $where, string $values) : string|null
     {
         $bindingFallback = __CLASS__ . ':UNKNOWN_BINDING';
         $currentBinding = $this->getCurrentBinding("where", $bindingFallback);
